@@ -1,0 +1,35 @@
+
+TETETETETETETETETETETETETETETE
+TETETETETETETETETETETETETETETE
+TETE                      TETE
+TETE                      TETE
+TETETETE    TET    ETETETETETE
+TETETETE    TET         ETETTE
+TETETETE    TET         ETETTE
+TETETETE    TET    ETETETETETE
+TETETETE    TET          ETETE
+TETETETE    TET          ETETE
+TETETETETETETETETETETETETETETE
+TETETETETETETETETETETETETETETE                     Technology-Everywhere.
+_________________________________________________________________________
+
+
+About eZ Advanced Autoload
+========================================================================
+  This extension provides a preview for log files in eZ Publish BO.
+
+
+Requirements
+========================================================================
+  PHP 5.3.0 or above (for namespace and lsb)
+  eZPublish 4.4 or above (introduction of extension.xml elements)
+ 
+ 
+Install
+========================================================================
+  Please read the install file place under doc folder.
+
+  
+Technical notes
+========================================================================
+  
