@@ -21,12 +21,12 @@
                                 <tr>
                                     <td>
                                         <div id="container_file_{$key}" title="{$file.id}" class="file-container" style="height:300px;overflow-y: scroll;color:#ffff00;background-color:#000000;padding-right:10px;padding-left:5px;">
-				                            <div class="file_id">{$file.id}</div>
-				                            <div class="file_filesize">{$file.filesize}</div>
-				                            <div class="file_content">
-				                               {$file.content|nl2br()}
-				                            </div>
-				                        </div>
+                                            <div class="file_id">{$file.id}</div>
+                                            <div class="file_filesize">{$file.filesize}</div>
+                                            <div class="file_content">
+                                               {$file.content|nl2br()}
+                                            </div>
+                                        </div>
                                     </td>
                                 </tr>
                             </tbody>
@@ -49,7 +49,7 @@
     {/if}
 </div>
 
-{def $authorized_lib = array( 'jquery' )}{* TODO: Manage authorized lib with file parsing helper in futur *}
+{def $authorized_lib = array( 'jquery' )}
 {def $preferred_lib = ezini('eZJSCore', 'PreferredLibrary', 'ezjscore.ini')}{if $authorized_lib|contains( $preferred_lib )|not()}{set $preferred_lib = 'jquery'}{/if}
 {ezscript_require( array( concat( 'ezjsc::', $preferred_lib ), concat( 'ezjsc::', $preferred_lib, 'io' ), concat( 'admindebugtail_', $preferred_lib, '.js' ) ) )}
 {undef $authorized_lib $preferred_lib}

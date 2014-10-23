@@ -1,8 +1,8 @@
-<?php 
+<?php
 namespace extension\ezadmindebug\classes\ajax {
-    
+
     class ezjscAdminDebugServerFunctions extends \ezjscServerFunctions {
-        
+
         public static function tail( array $args ) {
             $result = array( 'id' => 0, 'content' => null, 'filesize' => 0 );
             if ( is_array($args) && isset($args[0]) && isset($args[1]) && is_numeric($args[1]) ) {
@@ -16,7 +16,7 @@ namespace extension\ezadmindebug\classes\ajax {
             }
             return $result;
         }
-        
+
         /**
          * Cache time for retunrned data, only currently used by ezjscPacker
          * @see ezjscServerFunctions::getCacheTime
@@ -28,8 +28,7 @@ namespace extension\ezadmindebug\classes\ajax {
         public static function getCacheTime( $functionName ) {
             return parent::getCacheTime( $functionName );
         }
-        
+
     }
-    
+
 }
-?>

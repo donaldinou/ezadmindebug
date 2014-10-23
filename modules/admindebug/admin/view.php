@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 // global vars
 $Module = $Params['Module'];
@@ -36,5 +36,3 @@ $Result['path'] = array(
                         'text' => ezpI18n::tr( 'modules/admin/admindebug/list', 'View Debug')
                     )
 );
-
-?>

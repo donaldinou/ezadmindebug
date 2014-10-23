@@ -1,4 +1,4 @@
-<?php 
+<?php
 use extension\ezadmindebug\classes\helpers\eZAdminDebugHelper;
 
 // global vars
@@ -31,4 +31,3 @@ $Result['path'] = array(
                         'text' => ezpI18n::tr( 'modules/admin/admindebug/list', 'Administrate Debug')
                     )
 );
-?>

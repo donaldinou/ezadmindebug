@@ -26,5 +26,3 @@ $ViewList['view'] = array(
 $FunctionList = array();
 $FunctionList['list'] = array();
 $FunctionList['view'] = array();
-
-?>

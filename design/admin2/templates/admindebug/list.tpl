@@ -1,5 +1,5 @@
 {def $exist = false()}
-    
+
 <form id="form_admin_debug_view" name="admin_debug_view" method="post" action="{'admindebug/view'|ezurl('no')}">
     <div class="context-block">
         <div class="box-header">
@@ -31,8 +31,8 @@
                                     <tr valign="top" class="{$style}">
                                         <td width="1">
                                             <input type="checkbox"
-                                                   id="file_list_{$key}" 
-                                                   name="FileList[]" 
+                                                   id="file_list_{$key}"
+                                                   name="FileList[]"
                                                    title="{'Select File to Interact with'|i18n('')}"
                                                    {if is_set($file.id)}value="{$file.id}"{else}disabeld="disabled"{/if} />
                                         </td>
@@ -63,7 +63,7 @@
     </div>
 </form>
 
-{def $authorized_lib = array( 'jquery' )}{* TODO: Manage authorized lib with file parsing helper in futur *}
+{def $authorized_lib = array( 'jquery' )}
 {def $preferred_lib = ezini('eZJSCore', 'PreferredLibrary', 'ezjscore.ini')}{if $authorized_lib|contains( $preferred_lib )|not()}{set $preferred_lib = 'jquery'}{/if}
 {ezscript_require( array( concat( 'ezjsc::', $preferred_lib ), concat( 'ezjsc::', $preferred_lib, 'io' ), concat( 'admindebuglist_', $preferred_lib, '.js' ) ) )}
 {undef $authorized_lib $preferred_lib}
