@@ -121,4 +121,4 @@ namespace extension\ezadmindebug\autoloads {
     }
 
 }
-?>
+
