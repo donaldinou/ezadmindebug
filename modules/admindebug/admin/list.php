@@ -9,8 +9,6 @@ $sys = \eZSys::instance();
 
 // vars to set in the template
 $files = array();
-//$errors = new eZTemplateErrorManager();
-
 
 // BEGIN
 $files = array_merge(eZAdminDebugHelper::iterateLogDirectory(), eZAdminDebugHelper::iterateStoreDirectory(), eZAdminDebugHelper::iterateDebugDirectory());

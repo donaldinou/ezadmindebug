@@ -15,7 +15,7 @@ namespace extension\ezadmindebug\classes\helpers {
 
         public static function iterateLogDirectory( $hasEncoded=true ) {
             $ini = eZINI::instance();
-            $varDir = 'var'; // FIXME : variable 'VarDir' is used for storage log in eZ Publish...
+            $varDir = 'var'; // NOTE : variable 'VarDir' is used for storage log in eZ Publish...
             $logDir = ($ini instanceof eZINI && $ini->hasVariable('FileSettings', 'LogDir')) ? $ini->variable('FileSettings', 'LogDir') : 'log';
             $logDirectory = getcwd().DIRECTORY_SEPARATOR.$varDir.DIRECTORY_SEPARATOR.$logDir;
             return iterateDirectory($logDirectory);
@@ -28,7 +28,6 @@ namespace extension\ezadmindebug\classes\helpers {
             $result = array();
             $iterator = new DirectoryIterator($directory);
             foreach ($iterator as $fileinfo) { // NOTE use iterator template operator
-                // temp : $result[] = addLogFile($fileinfo);
                 if ($fileinfo instanceof DirectoryIterator && !$fileinfo->isDir() && $fileinfo->isReadable() ) { // NOTE : we can use getExtension method for php 5.3.6
                     $data = array('name' => $fileinfo->getFilename(), 'path' => $fileinfo->getPath());
                     if ($hasEncoded) {
