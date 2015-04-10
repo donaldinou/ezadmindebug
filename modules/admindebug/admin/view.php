@@ -8,7 +8,6 @@ $sys = \eZSys::instance();
 
 // vars to set in the template
 $files = array();
-//$errors = new eZTemplateErrorManager();
 
 // BEGIN
 if ($http instanceof \eZHTTPTool && $http->hasPostVariable('FileList')) {
